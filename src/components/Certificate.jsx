@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import fullstack from "../assets/certificates/certificate.jpg";
 import responsive from "../assets/certificates/responsive.png";
 import javascript from "../assets/certificates/javascript.png";
 
 const Certificate = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const certificates = [
     {
       id: 1,
@@ -22,6 +24,14 @@ const Certificate = () => {
     }
   ];
 
+  const openModal = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div
       name="certificates"
@@ -38,7 +48,10 @@ const Certificate = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {certificates.map(({ id, src, title, link }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <div className="h-[200px] overflow-hidden rounded-md">
+              <div 
+                className="h-[200px] overflow-hidden rounded-md cursor-pointer"
+                onClick={() => openModal(src)}
+              >
                 <img
                   src={src}
                   alt={title}
@@ -56,6 +69,23 @@ const Certificate = () => {
             </div>
           ))}
         </div>
+
+        {/* Modal */}
+        {selectedImage && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+            onClick={closeModal}
+          >
+            <div className="max-w-[90%] max-h-[90vh]">
+              <img
+                src={selectedImage}
+                alt="Certificate Preview"
+                className="max-w-full max-h-[90vh] object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
