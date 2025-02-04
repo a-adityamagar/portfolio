@@ -15,13 +15,19 @@ const Home = () => {
             I'm a Frontend developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            I have experience in building web applications using HTML, CSS,
-            JavaScript, React, and Tailwind CSS. I am passionate about creating
-            responsive and user-friendly interfaces that provide a seamless user
-            experience.
+            I have experience in building dynamic web applications using HTML,
+            CSS, JavaScript, React, and Tailwind CSS. I am passionate about
+            creating responsive and user-friendly interfaces that provide a
+            seamless user experience, optimizing performance, and collaborating through
+            GitHub for efficient version control and teamwork.
           </p>
           <div>
-            <Link to="portfolio" smooth duration={500} className="group text-white w-fit px-6 py-3 my-2  flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer ">
+            <Link
+              to="portfolio"
+              smooth
+              duration={500}
+              className="group text-white w-fit px-6 py-3 my-2  flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer "
+            >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <TiArrowRight size={25} className="ml-1" />
