@@ -45,12 +45,12 @@ const Portfolio = () => {
       demoLink: "https://trendswear.vercel.app/",
       githubLink: "https://github.com/a-adityamagar/Trendswear",
     },
-    {
-      id: 7,
-      src: movie,
-      demoLink: "https://movie-quest-five.vercel.app/",
-      githubLink: "https://github.com/a-adityamagar/movieQuest",
-    },
+    // {
+    //   id: 7,
+    //   src: movie,
+    //   demoLink: "https://movie-quest-five.vercel.app/",
+    //   githubLink: "https://github.com/a-adityamagar/movieQuest",
+    // },
   ];
 
   return (
@@ -66,7 +66,7 @@ const Portfolio = () => {
           <p className="py-6">Checkout Some of my works</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 ">
           {portfolios.map(({ id, src, demoLink, githubLink }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
