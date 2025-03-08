@@ -5,6 +5,7 @@ import weather from "../assets/portfolio/weather.png";
 import cars from "../assets/portfolio/cars.png";
 import pokemon from "../assets/portfolio/pokemon.png";
 import cloth from "../assets/portfolio/cloth.png";
+import movie from "../assets/portfolio/movie.png";
 
 const Portfolio = () => {
   const portfolios = [
@@ -43,7 +44,13 @@ const Portfolio = () => {
       src: cloth,
       demoLink: "https://trendswear.vercel.app/",
       githubLink: "https://github.com/a-adityamagar/Trendswear",
-    }
+    },
+    {
+      id: 7,
+      src: movie,
+      demoLink: "https://movie-quest-five.vercel.app/",
+      githubLink: "https://github.com/a-adityamagar/movieQuest",
+    },
   ];
 
   return (
